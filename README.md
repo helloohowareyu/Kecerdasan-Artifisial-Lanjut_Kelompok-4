@@ -1,1 +1,0 @@
-# Kecerdasan-Artifisial-Lanjut_Kelompok-4
