@@ -1,0 +1,523 @@
+MSSubClass: Mengidentifikasi jenis hunian yang terlibat dalam transaksi jual beli.
+
+        20	RUMAH 1 LANTAI TAHUN 1946 & LEBIH BARU, SEMUA GAYA
+        30	RUMAH 1 LANTAI TAHUN 1945 & LEBIH LAMA
+        40	RUMAH 1 LANTAI DENGAN LOTENG SELESAI, SEMUA USIA
+        45	RUMAH 1,5 LANTAI - BELUM SELESAI, SEMUA USIA
+        50	RUMAH 1,5 LANTAI SELESAI, SEMUA USIA
+        60	RUMAH 2 LANTAI TAHUN 1946 & LEBIH BARU
+        70	RUMAH 2 LANTAI TAHUN 1945 & LEBIH LAMA
+        75	RUMAH 2,5 LANTAI, SEMUA USIA
+        80	SPLIT ATAU MULTI-LEVEL
+        85	SPLIT FOYER (LANTAI TERBAGI)
+        90	DUPLEX - SEMUA GAYA DAN USIA
+       120	RUMAH 1 LANTAI PUD (Pengembangan Unit Terencana) - TAHUN 1946 & LEBIH BARU
+       150	RUMAH 1,5 LANTAI PUD - SEMUA USIA
+       160	RUMAH 2 LANTAI PUD - TAHUN 1946 & LEBIH BARU
+       180	PUD - MULTI-LEVEL - TERMASUK SPLIT LEV/FOYER
+       190	KONVERSI 2 KELUARGA - SEMUA GAYA DAN USIA
+
+MSZoning: Mengidentifikasi klasifikasi zona umum dari transaksi jual beli.
+
+       A	Pertanian
+       C	Komersial
+       FV	Perumahan Desa Terapung
+       I	Industri
+       RH	Perumahan Kepadatan Tinggi
+       RL	Perumahan Kepadatan Rendah
+       RP	Taman Perumahan Kepadatan Rendah
+       RM	Perumahan Kepadatan Sedang
+
+LotFrontage: Panjang bagian kavling yang berbatasan dengan jalan (dalam kaki)
+
+LotArea: Luas kavling dalam kaki persegi
+
+Street: Jenis akses jalan menuju properti
+
+       Grvl	Kerikil
+       Pave	Beraspal
+
+Alley: Jenis akses gang menuju properti
+
+       Grvl	Kerikil
+       Pave	Beraspal
+       NA	Tidak ada akses gang
+
+LotShape: Bentuk umum properti
+
+       Reg	Reguler (persegi/persegi panjang)
+       IR1	Sedikit tidak beraturan
+       IR2	Cukup tidak beraturan
+       IR3	Tidak beraturan
+
+LandContour: Kerataan permukaan properti
+
+       Lvl	Hampir datar/rata
+       Bnk	Terasering - kenaikan cepat dan signifikan dari ketinggian jalan ke bangunan
+       HLS	Lereng bukit - kemiringan signifikan dari sisi ke sisi
+       Low	Cekungan (lebih rendah dari sekitarnya)
+
+Utilities: Jenis utilitas yang tersedia
+
+       AllPub	Semua utilitas publik (Listrik, Gas, Air, & Saluran Pembuangan)
+       NoSewr	Listrik, Gas, dan Air (Tangki Septik)
+       NoSeWa	Listrik dan Gas saja
+       ELO	Hanya Listrik
+
+LotConfig: Konfigurasi kavling
+
+       Inside	Kavling di dalam (bukan sudut)
+       Corner	Kavling sudut
+       CulDSac	Jalan buntu (cul-de-sac)
+       FR2	Memiliki sisi depan di 2 sisi properti
+       FR3	Memiliki sisi depan di 3 sisi properti
+
+LandSlope: Kemiringan properti
+
+       Gtl	Kemiringan landai
+       Mod	Kemiringan sedang
+       Sev	Kemiringan curam
+
+Neighborhood: Lokasi fisik dalam batas kota Ames
+
+       Blmngtn	Bloomington Heights
+       Blueste	Bluestem
+       BrDale	Briardale
+       BrkSide	Brookside
+       ClearCr	Clear Creek
+       CollgCr	College Creek
+       Crawfor	Crawford
+       Edwards	Edwards
+       Gilbert	Gilbert
+       IDOTRR	Iowa DOT dan Rel Kereta Api
+       MeadowV	Meadow Village
+       Mitchel	Mitchell
+       Names	North Ames
+       NoRidge	Northridge
+       NPkVill	Northpark Villa
+       NridgHt	Northridge Heights
+       NWAmes	Northwest Ames
+       OldTown	Old Town
+       SWISU	Selatan & Barat Iowa State University
+       Sawyer	Sawyer
+       SawyerW	Sawyer West
+       Somerst	Somerset
+       StoneBr	Stone Brook
+       Timber	Timberland
+       Veenker	Veenker
+
+Condition1: Kedekatan dengan berbagai kondisi lingkungan
+
+       Artery	Berbatasan dengan jalan arteri
+       Feedr	Berbatasan dengan jalan penghubung
+       Norm	Normal
+       RRNn	Dalam radius 200 kaki dari rel kereta Utara-Selatan
+       RRAn	Berbatasan langsung dengan rel kereta Utara-Selatan
+       PosN	Dekat fitur positif di luar lokasi (taman, jalur hijau, dll.)
+       PosA	Berbatasan langsung dengan fitur positif di luar lokasi
+       RRNe	Dalam radius 200 kaki dari rel kereta Timur-Barat
+       RRAe	Berbatasan langsung dengan rel kereta Timur-Barat
+
+Condition2: Kedekatan dengan berbagai kondisi lingkungan (jika lebih dari satu kondisi ada)
+
+       Artery	Berbatasan dengan jalan arteri
+       Feedr	Berbatasan dengan jalan penghubung
+       Norm	Normal
+       RRNn	Dalam radius 200 kaki dari rel kereta Utara-Selatan
+       RRAn	Berbatasan langsung dengan rel kereta Utara-Selatan
+       PosN	Dekat fitur positif di luar lokasi (taman, jalur hijau, dll.)
+       PosA	Berbatasan langsung dengan fitur positif di luar lokasi
+       RRNe	Dalam radius 200 kaki dari rel kereta Timur-Barat
+       RRAe	Berbatasan langsung dengan rel kereta Timur-Barat
+
+BldgType: Jenis hunian
+
+       1Fam	Rumah keluarga tunggal terpisah
+       2FmCon	Konversi dua keluarga; awalnya dibangun sebagai hunian satu keluarga
+       Duplx	Duplex
+       TwnhsE	Unit ujung rumah kota (townhouse)
+       TwnhsI	Unit tengah rumah kota (townhouse)
+
+HouseStyle: Gaya hunian
+
+       1Story	Satu lantai
+       1.5Fin	Satu setengah lantai: lantai 2 sudah selesai
+       1.5Unf	Satu setengah lantai: lantai 2 belum selesai
+       2Story	Dua lantai
+       2.5Fin	Dua setengah lantai: lantai 2 sudah selesai
+       2.5Unf	Dua setengah lantai: lantai 2 belum selesai
+       SFoyer	Split Foyer (foyer terpisah)
+       SLvl	Split Level (lantai terbagi)
+
+OverallQual: Penilaian keseluruhan material dan penyelesaian rumah
+
+       10	Sangat Istimewa
+       9	Istimewa
+       8	Sangat Baik
+       7	Baik
+       6	Di Atas Rata-rata
+       5	Rata-rata
+       4	Di Bawah Rata-rata
+       3	Cukup
+       2	Buruk
+       1	Sangat Buruk
+
+OverallCond: Penilaian kondisi keseluruhan rumah
+
+       10	Sangat Istimewa
+       9	Istimewa
+       8	Sangat Baik
+       7	Baik
+       6	Di Atas Rata-rata
+       5	Rata-rata
+       4	Di Bawah Rata-rata
+       3	Cukup
+       2	Buruk
+       1	Sangat Buruk
+
+YearBuilt: Tahun konstruksi awal
+
+YearRemodAdd: Tahun renovasi (sama dengan tahun konstruksi jika tidak ada renovasi atau penambahan)
+
+RoofStyle: Jenis atap
+
+       Flat	Datar
+       Gable	Pelana
+       Gambrel	Gambrel (seperti lumbung)
+       Hip	Perisai (hip)
+       Mansard	Mansard
+       Shed	Atap miring satu sisi
+
+RoofMatl: Material atap
+
+       ClyTile	Tanah liat atau genteng
+       CompShg	Sirap komposit standar
+       Membran	Membran
+       Metal	Metal
+       Roll	Gulungan
+       Tar&Grv	Kerikil & Tar
+       WdShake	Sirap kayu (kasar)
+       WdShngl	Sirap kayu (halus)
+
+Exterior1st: Material penutup eksterior rumah
+
+       AsbShng	Sirap asbes
+       AsphShn	Sirap aspal
+       BrkComm	Bata umum
+       BrkFace	Bata fasad
+       CBlock	Blok beton (batako)
+       CemntBd	Papan semen
+       HdBoard	Papan keras (hardboard)
+       ImStucc	Plester imitasi
+       MetalSd	Siding metal
+       Other	Lainnya
+       Plywood	Kayu lapis
+       PreCast	Beton pracetak
+       Stone	Batu
+       Stucco	Plester (stucco)
+       VinylSd	Siding vinil
+       Wd Sdng	Siding kayu
+       WdShing	Sirap kayu
+
+Exterior2nd: Material penutup eksterior rumah (jika menggunakan lebih dari satu material)
+
+       AsbShng	Sirap asbes
+       AsphShn	Sirap aspal
+       BrkComm	Bata umum
+       BrkFace	Bata fasad
+       CBlock	Blok beton (batako)
+       CemntBd	Papan semen
+       HdBoard	Papan keras (hardboard)
+       ImStucc	Plester imitasi
+       MetalSd	Siding metal
+       Other	Lainnya
+       Plywood	Kayu lapis
+       PreCast	Beton pracetak
+       Stone	Batu
+       Stucco	Plester (stucco)
+       VinylSd	Siding vinil
+       Wd Sdng	Siding kayu
+       WdShing	Sirap kayu
+
+MasVnrType: Jenis veneer pasangan bata
+
+       BrkCmn	Bata umum
+       BrkFace	Bata fasad
+       CBlock	Blok beton (batako)
+       None	Tidak ada
+       Stone	Batu
+
+MasVnrArea: Luas veneer pasangan bata dalam kaki persegi
+
+ExterQual: Penilaian kualitas material eksterior
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Rata-rata/Tipikal
+       Fa	Cukup
+       Po	Buruk
+
+ExterCond: Penilaian kondisi material eksterior saat ini
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Rata-rata/Tipikal
+       Fa	Cukup
+       Po	Buruk
+
+Foundation: Jenis pondasi
+
+       BrkTil	Bata & Genteng
+       CBlock	Blok beton (batako)
+       PConc	Beton cor
+       Slab	Pelat (slab)
+       Stone	Batu
+       Wood	Kayu
+
+BsmtQual: Penilaian tinggi ruang bawah tanah (basement)
+
+       Ex	Istimewa (100+ inci)
+       Gd	Baik (90-99 inci)
+       TA	Tipikal (80-89 inci)
+       Fa	Cukup (70-79 inci)
+       Po	Buruk (<70 inci)
+       NA	Tidak ada basement
+
+BsmtCond: Penilaian kondisi umum ruang bawah tanah (basement)
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Tipikal - sedikit lembab masih diterima
+       Fa	Cukup - lembab atau ada retakan/penurunan
+       Po	Buruk - retakan parah, penurunan, atau basah
+       NA	Tidak ada basement
+
+BsmtExposure: Mengacu pada dinding yang menghadap keluar atau setinggi taman
+
+       Gd	Paparan baik
+       Av	Paparan rata-rata (split level atau foyer biasanya mendapat nilai rata-rata atau di atasnya)
+       Mn	Paparan minimum
+       No	Tidak ada paparan
+       NA	Tidak ada basement
+
+BsmtFinType1: Penilaian area basement yang sudah selesai
+
+       GLQ	Ruang hunian baik
+       ALQ	Ruang hunian rata-rata
+       BLQ	Ruang hunian di bawah rata-rata
+       Rec	Ruang rekreasi rata-rata
+       LwQ	Kualitas rendah
+       Unf	Belum selesai
+       NA	Tidak ada basement
+
+BsmtFinSF1: Luas kaki persegi yang sudah selesai tipe 1
+
+BsmtFinType2: Penilaian area basement yang sudah selesai (jika ada beberapa tipe)
+
+       GLQ	Ruang hunian baik
+       ALQ	Ruang hunian rata-rata
+       BLQ	Ruang hunian di bawah rata-rata
+       Rec	Ruang rekreasi rata-rata
+       LwQ	Kualitas rendah
+       Unf	Belum selesai
+       NA	Tidak ada basement
+
+BsmtFinSF2: Luas kaki persegi yang sudah selesai tipe 2
+
+BsmtUnfSF: Luas kaki persegi basement yang belum selesai
+
+TotalBsmtSF: Total luas kaki persegi basement
+
+Heating: Jenis pemanas
+
+       Floor	Tungku lantai
+       GasA	Tungku udara panas paksa berbahan bakar gas
+       GasW	Pemanas air panas atau uap berbahan bakar gas
+       Grav	Tungku gravitasi
+       OthW	Pemanas air panas atau uap selain gas
+       Wall	Tungku dinding
+
+HeatingQC: Kualitas dan kondisi pemanas
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Rata-rata/Tipikal
+       Fa	Cukup
+       Po	Buruk
+
+CentralAir: Pendingin udara sentral (AC central)
+
+       N	Tidak ada
+       Y	Ada
+
+Electrical: Sistem kelistrikan
+
+       SBrkr	Pemutus sirkuit standar & kabel Romex
+       FuseA	Kotak sekring di atas 60 AMP dan semua kabel Romex (Rata-rata)
+       FuseF	Kotak sekring 60 AMP dan sebagian besar kabel Romex (Cukup)
+       FuseP	Kotak sekring 60 AMP dan sebagian besar kabel pasak & tabung (Buruk)
+       Mix	Campuran
+
+1stFlrSF: Luas lantai pertama dalam kaki persegi
+
+2ndFlrSF: Luas lantai kedua dalam kaki persegi
+
+LowQualFinSF: Luas area selesai berkualitas rendah dalam kaki persegi (semua lantai)
+
+GrLivArea: Luas area hunian di atas permukaan tanah dalam kaki persegi
+
+BsmtFullBath: Jumlah kamar mandi lengkap di basement
+
+BsmtHalfBath: Jumlah kamar mandi setengah di basement
+
+FullBath: Jumlah kamar mandi lengkap di atas permukaan tanah
+
+HalfBath: Jumlah kamar mandi setengah di atas permukaan tanah
+
+Bedroom: Jumlah kamar tidur di atas permukaan tanah (TIDAK termasuk kamar tidur di basement)
+
+Kitchen: Jumlah dapur di atas permukaan tanah
+
+KitchenQual: Kualitas dapur
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Tipikal/Rata-rata
+       Fa	Cukup
+       Po	Buruk
+
+TotRmsAbvGrd: Total jumlah ruangan di atas permukaan tanah (tidak termasuk kamar mandi)
+
+Functional: Fungsionalitas rumah (asumsikan tipikal kecuali ada pengurangan yang diperlukan)
+
+       Typ	Fungsionalitas tipikal
+       Min1	Pengurangan minor 1
+       Min2	Pengurangan minor 2
+       Mod	Pengurangan sedang
+       Maj1	Pengurangan mayor 1
+       Maj2	Pengurangan mayor 2
+       Sev	Rusak parah
+       Sal	Hanya untuk salvage (penyelamatan material)
+
+Fireplaces: Jumlah perapian
+
+FireplaceQu: Kualitas perapian
+
+       Ex	Istimewa - Perapian bata luar biasa
+       Gd	Baik - Perapian bata di lantai utama
+       TA	Rata-rata - Perapian prefabrikasi di area hunian utama atau perapian bata di basement
+       Fa	Cukup - Perapian prefabrikasi di basement
+       Po	Buruk - Kompor Ben Franklin
+       NA	Tidak ada perapian
+
+GarageType: Lokasi garasi
+
+       2Types	Lebih dari satu jenis garasi
+       Attchd	Terpasang pada rumah
+       Basment	Garasi basement
+       BuiltIn	Terintegrasi (garasi merupakan bagian dari rumah - biasanya ada ruangan di atas garasi)
+       CarPort	Carport (atap terbuka)
+       Detchd	Terpisah dari rumah
+       NA	Tidak ada garasi
+
+GarageYrBlt: Tahun garasi dibangun
+
+GarageFinish: Penyelesaian interior garasi
+
+       Fin	Selesai
+       RFn	Penyelesaian kasar
+       Unf	Belum selesai
+       NA	Tidak ada garasi
+
+GarageCars: Kapasitas garasi dalam jumlah mobil
+
+GarageArea: Luas garasi dalam kaki persegi
+
+GarageQual: Kualitas garasi
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Tipikal/Rata-rata
+       Fa	Cukup
+       Po	Buruk
+       NA	Tidak ada garasi
+
+GarageCond: Kondisi garasi
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Tipikal/Rata-rata
+       Fa	Cukup
+       Po	Buruk
+       NA	Tidak ada garasi
+
+PavedDrive: Jalan masuk (driveway) beraspal
+
+       Y	Beraspal
+       P	Sebagian beraspal
+       N	Tanah/Kerikil
+
+WoodDeckSF: Luas dek kayu dalam kaki persegi
+
+OpenPorchSF: Luas teras terbuka dalam kaki persegi
+
+EnclosedPorch: Luas teras tertutup dalam kaki persegi
+
+3SsnPorch: Luas teras tiga musim dalam kaki persegi
+
+ScreenPorch: Luas teras bersekat (screen porch) dalam kaki persegi
+
+PoolArea: Luas kolam renang dalam kaki persegi
+
+PoolQC: Kualitas kolam renang
+
+       Ex	Istimewa
+       Gd	Baik
+       TA	Rata-rata/Tipikal
+       Fa	Cukup
+       NA	Tidak ada kolam renang
+
+Fence: Kualitas pagar
+
+       GdPrv	Privasi baik
+       MnPrv	Privasi minimum
+       GdWo	Kayu baik
+       MnWw	Kayu/kawat minimum
+       NA	Tidak ada pagar
+
+MiscFeature: Fitur lain-lain yang tidak tercakup dalam kategori lain
+
+       Elev	Elevator
+       Gar2	Garasi ke-2 (jika tidak tercatat di bagian garasi)
+       Othr	Lainnya
+       Shed	Gudang (lebih dari 100 kaki persegi)
+       TenC	Lapangan tenis
+       NA	Tidak ada
+
+MiscVal: Nilai ($) dari fitur lain-lain
+
+MoSold: Bulan terjual (BB)
+
+YrSold: Tahun terjual (TTTT)
+
+SaleType: Jenis penjualan
+
+       WD	Akta Jaminan - Konvensional
+       CWD	Akta Jaminan - Tunai
+       VWD	Akta Jaminan - Pinjaman VA
+       New	Rumah baru dibangun dan dijual
+       COD	Akta Pejabat Pengadilan/Warisan
+       Con	Kontrak uang muka 15% dengan syarat reguler
+       ConLw	Kontrak uang muka rendah dan bunga rendah
+       ConLI	Kontrak bunga rendah
+       ConLD	Kontrak uang muka rendah
+       Oth	Lainnya
+
+SaleCondition: Kondisi penjualan
+
+       Normal	Penjualan normal
+       Abnorml	Penjualan tidak normal - tukar tambah, penyitaan, short sale
+       AdjLand	Pembelian lahan yang berbatasan
+       Alloca	Alokasi - dua properti terkait dengan akta terpisah, biasanya kondominium dengan unit garasi
+       Family	Penjualan antar anggota keluarga
+       Partial	Rumah belum selesai dibangun saat penilaian terakhir (terkait dengan rumah baru)
