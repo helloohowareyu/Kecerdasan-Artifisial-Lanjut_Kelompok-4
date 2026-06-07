@@ -29,5 +29,9 @@ RUN npm install && npm run build
 # Expose port (Railway menyediakan $PORT)
 EXPOSE 8080
 
-# Salin env, generate key, lalu jalankan PHP built-in server saat startup container
-CMD php -r "file_exists('.env') || copy('.env.example', '.env');" && php artisan key:generate --force && php -S 0.0.0.0:${PORT:-8080} -t public
+# Salin env, buat database sqlite, jalankan migrasi, generate key, lalu jalankan PHP built-in server saat startup container
+CMD php -r "file_exists('.env') || copy('.env.example', '.env');" && \
+    php artisan key:generate --force && \
+    mkdir -p database && touch database/database.sqlite && \
+    php artisan migrate --force && \
+    php -S 0.0.0.0:${PORT:-8080} -t public
