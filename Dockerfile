@@ -26,8 +26,11 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Install Node dependencies & build assets
 RUN npm install && npm run build
 
+# Generate app key if not set
+RUN php artisan key:generate --force || true
+
 # Expose port (Railway provides $PORT)
 EXPOSE 8080
 
-# Start Laravel server
-CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
+# Start PHP built-in server directly (menghindari bug artisan serve dengan $PORT string)
+CMD php -S 0.0.0.0:${PORT:-8080} -t public
