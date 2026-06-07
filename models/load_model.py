@@ -14,27 +14,12 @@ try:
     # Load JSON
     model_data = json.loads(json_content)
     
-    print("=== MODEL BERHASIL DIMUAT ===")
-    print("Tipe Model:", model_data.get("type"))
-    print("\nFitur Numerik (features_num):", model_data.get("features_num"))
-    print("Fitur Kategorikal (feature_cat):", model_data.get("feature_cat"))
-    print("\nMetrics Model:")
-    print(json.dumps(model_data.get("metrics"), indent=4))
-    
-    # Tampilkan seluruh data model secara rapi
-    print("\n=== SELURUH DATA MODEL ===")
-    print(json.dumps(model_data, indent=4))
-
-    # Simpan sebagai file JSON standar agar bisa dibuka di text editor
-    output_json_path = os.path.join(os.path.dirname(__file__), 'house_price_model.json')
-    with open(output_json_path, 'w', encoding='utf-8') as out_f:
-        json.dump(model_data, out_f, indent=4)
-    print(f"\n[INFO] File JSON baru berhasil dibuat di: {output_json_path}")
-    print("Anda sekarang bisa membuka file 'house_price_model.json' tersebut langsung di VS Code / editor teks Anda.")
+    print(f"[OK] Model '{model_data.get('type')}' berhasil dimuat.")
 
 except Exception as e:
     print("=== GAGAL MEMUAT MODEL ===")
     print("Error:", e)
+    model_data = None
 
 def predict_house_price(input_data, model_data):
     # 1. Ambil konfigurasi model
