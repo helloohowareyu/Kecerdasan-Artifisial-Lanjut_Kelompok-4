@@ -26,11 +26,8 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Install Node dependencies & build assets
 RUN npm install && npm run build
 
-# Generate app key if not set
-RUN php artisan key:generate --force || true
-
-# Expose port (Railway provides $PORT)
+# Expose port (Railway menyediakan $PORT)
 EXPOSE 8080
 
-# Start PHP built-in server directly (menghindari bug artisan serve dengan $PORT string)
-CMD php -S 0.0.0.0:${PORT:-8080} -t public
+# Salin env, generate key, lalu jalankan PHP built-in server saat startup container
+CMD php -r "file_exists('.env') || copy('.env.example', '.env');" && php artisan key:generate --force && php -S 0.0.0.0:${PORT:-8080} -t public
