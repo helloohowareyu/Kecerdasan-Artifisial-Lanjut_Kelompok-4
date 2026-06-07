@@ -47,7 +47,8 @@ class PredictionController extends Controller
             $validated['PoolArea']  = $validated['PoolArea'] * $sqftPerM2;
 
             // Kirim data (sudah dalam sqft) ke FastAPI endpoint /predict
-            $response = Http::timeout(10)->post('http://127.0.0.1:8000/predict', $validated);
+            $baseUrl = rtrim(config('services.prediction.url'), '/');
+            $response = Http::timeout(10)->post("{$baseUrl}/predict", $validated);
 
             if ($response->successful()) {
                 $result = $response->json();
